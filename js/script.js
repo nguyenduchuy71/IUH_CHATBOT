@@ -39,36 +39,14 @@ function scrollToBottomOfResults() {
 
 function send(message) {
   $.ajax({
-    url: "http://localhost:5005/webhooks/rest/webhook",
+    url: "http://fb-chatbot.xyz/get-response/",
     type: "POST",
     contentType: "application/json",
     data: JSON.stringify({
       message: message,
     }),
     success: function (data, textStatus) {
-      if (data != null) {
-        setBotResponse(data);
-      }
-      firebase.auth().onAuthStateChanged((user) => {
-        if (user) {
-          db.collection("noidungtrochuyen")
-            .add({
-              nd_user: message,
-              ten_user: user["email"],
-              bot_chat: data[0]["text"],
-              timestamp: firebase.firestore.FieldValue.serverTimestamp(),
-            })
-            .then(() => {
-              console.log(user);
-            })
-            .catch((err) => {
-              console.log(err);
-            });
-        } else {
-          user = null;
-        }
-      });
-      // console.log(data);
+      setBotResponse(data['response']);
     },
     error: function (errorMessage) {
       setBotResponse("");
@@ -135,23 +113,6 @@ $("#profile_div").click(function () {
   $(".profile_div").toggle();
   $(".widget").toggle();
   $(".chatbot").css("display", "none");
-  firebase.auth().onAuthStateChanged((user) => {
-    if (user) {
-      db.collection("noidungtrochuyen")
-        .orderBy("timestamp")
-        .get()
-        .then(function (querySnapshot) {
-          querySnapshot.forEach(function (doc) {
-            if (user.email == doc.data()["ten_user"]) {
-              setUserResponse(doc.data()["nd_user"]);
-              setBotRes(doc.data()["bot_chat"]);
-            }
-          });
-        });
-    } else {
-      user = null;
-    }
-  });
   scrollToBottomOfResults();
 });
 
