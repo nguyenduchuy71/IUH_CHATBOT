@@ -1,0 +1,297 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+h1 {
+  color: #426696;
+  font-weight: 600;
+  font-size: 3rem;
+  opacity: 0.8;
+}
+.logo {
+  max-width: 150px;
+  border-radius: 10px;
+}
+h2,
+p {
+  color: #658ec6;
+  font-weight: 550;
+  opacity: 0.9;
+}
+
+h3 {
+  font-size: 1.6rem;
+  color: #426696;
+  font-weight: 600;
+  opacity: 0.9;
+}
+
+main {
+  min-height: 100vh;
+  background: linear-gradient(to right top, #65dfc9, #6cdbeb);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.glass {
+  display: flex;
+  background: white;
+  min-height: 80vh;
+  width: 80%;
+  margin: 0 auto;
+  background: linear-gradient(
+    to right bottom,
+    rgba(255, 255, 255, 0.7),
+    rgba(255, 255, 255, 0.3)
+  );
+  border-radius: 2rem;
+  z-index: 2;
+  backdrop-filter: blur(2rem);
+}
+.dashboard {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  text-align: center;
+  background: linear-gradient(
+    to right bottom,
+    rgba(255, 255, 255, 0.7),
+    rgba(255, 255, 255, 0.3)
+  );
+  border-radius: 2rem;
+}
+
+.link {
+  display: flex;
+  margin: 2rem 0rem;
+  padding: 1rem 2rem;
+  align-items: center;
+}
+.link h2 {
+  padding: 0rem 2rem;
+  font-size: 1.4em;
+}
+.games {
+  flex: 2;
+}
+
+.link:hover {
+  cursor: pointer;
+  opacity: 0.75;
+}
+
+/* GAMES */
+.status {
+  margin-bottom: 3rem;
+}
+
+.status input {
+  background: linear-gradient(
+    to right bottom,
+    rgba(255, 255, 255, 0.7),
+    rgba(255, 255, 255, 0.3)
+  );
+  border: none;
+  width: 50%;
+  padding: 0.5rem;
+  border-radius: 2rem;
+}
+
+.games {
+  margin: 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.card {
+  max-height: 150px;
+  display: flex;
+  background: linear-gradient(
+    to left top,
+    rgba(255, 255, 255, 0.8),
+    rgba(255, 255, 255, 0.5)
+  );
+  border-radius: 1rem;
+  margin: 1.5rem 0rem;
+  padding: 1rem;
+  box-shadow: 6px 6px 20px rgba(122, 122, 122, 0.212);
+  justify-content: space-between;
+}
+.card img {
+  width: 80px;
+  height: 80px;
+}
+.card-info {
+  margin-left: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+.card:hover {
+  cursor: pointer;
+  background: linear-gradient(
+    to left top,
+    rgba(255, 255, 255, 1),
+    rgba(255, 255, 255, 0.8)
+  );
+}
+
+.chatbot {
+  position: fixed;
+  z-index: 9999;
+  right: 0.5rem;
+  bottom: 1rem;
+  animation: chatbot-anmation 1.5s infinite;
+}
+.chatbot:hover {
+  cursor: pointer;
+}
+.percentage {
+  font-weight: bold;
+  background: linear-gradient(to right top, #65dfc9, #6cdbeb);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.room {
+  cursor: default;
+}
+@keyframes chatbot-anmation {
+  50% {
+    opacity: 0.6;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.container {
+  z-index: 9999;
+}
+
+.footer {
+  margin: 0 auto;
+  width: 80%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.contact {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
+  z-index: -1;
+}
+.contact-list {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+
+.footer li {
+  font-size: 1.8rem;
+}
+.contact-item {
+  padding: 0 20px;
+}
+.contact-item:hover .contact-item img {
+  cursor: pointer;
+}
+a:hover {
+  cursor: pointer;
+}
+.contact-item img {
+  width: 40px;
+}
+.thanhvien,
+.team,
+.giangvien {
+  cursor: default;
+}
+.team h2 {
+  margin-left: 30px;
+}
+.thanhvien ul li,
+.thanhvien ul li h2,
+.team ul li,
+.team ul h2,
+.giangvien ul li,
+.giangvien ul h2 {
+  text-align: center;
+}
+/*Mobile */
+@media only screen and (max-width: 46.1875em) {
+  .glass {
+    width: 100%;
+  }
+  .card-info p,
+  .card-info h2 {
+    display: none;
+  }
+  .logo img {
+    width: 80%;
+  }
+  .link img {
+    display: none;
+  }
+  .contact-item {
+    padding: 10px 0;
+  }
+  .user img {
+    padding-top: 10px;
+    width: 75%;
+  }
+  .footer {
+    flex-direction: column;
+    align-self: center;
+    flex-wrap: nowrap;
+    justify-content: center;
+  }
+  .footer ul {
+    padding: 10px 0;
+  }
+  .footer li {
+    padding: 2px 0;
+  }
+  .footer h2 {
+    display: none;
+  }
+  .contact-item img {
+    padding: 1rem;
+    width: 80px;
+  }
+}
+/*Tablet*/
+@media only screen and (min-width: 46.25em) and (max-width: 63.9375em) {
+  .glass {
+    width: 100%;
+  }
+  .card-info h2 {
+    font-size: 1.8rem;
+  }
+  .card-info p {
+    display: 1.2rem;
+  }
+  .logo img {
+    width: 90%;
+  }
+  .user img {
+    padding-top: 10px;
+    width: 85%;
+  }
+  .footer li {
+    padding: 2px 0;
+  }
+  .contact-item img {
+    padding: 1rem;
+    width: 80px;
+  }
+}

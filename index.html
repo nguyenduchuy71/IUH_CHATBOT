@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>IUH_CHATBOT</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/style_bot.css" />
+    <link rel="stylesheet" type="text/css" href="./css/materialize.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
+    />
+  </head>
+  <body>
+    <main>
+      <section class="glass">
+        <div class="dashboard">
+          <div class="user">
+            <img src="./images/ailablogo.jpg" alt="logo" class="logo" />
+            <h3 class="room">AI LAB</h3>
+            <p class="room">H9.3</p>
+          </div>
+          <div class="links">
+            <div class="link">
+              <img src="./images/twitch.png" alt="" />
+              <h2>Giới thiệu</h2>
+            </div>
+            <div class="link">
+              <img src="./images/steam.png" alt="" />
+              <h2>Thông báo</h2>
+            </div>
+            <div class="link">
+              <img src="./images/library.png" alt="" />
+              <h2>Thư viện</h2>
+            </div>
+          </div>
+        </div>
+        <div class="games">
+          <div class="cards">
+            <div class="card">
+              <img src="./images/science.png" alt="cs-logo" />
+              <div class="card-info">
+                <h2>Khoa học máy tính</h2>
+                <p>
+                  Khoa học Máy tính là ngành học dành cho những bạn trẻ đam mê
+                  nghiên cứu chuyên sâu về CNTT, khả năng tính toán của hệ thống
+                  máy tính.
+                </p>
+              </div>
+            </div>
+            <div class="card">
+              <img src="./images/infographic.png" alt="de-logo" />
+              <div class="card-info">
+                <h2>Khoa học dữ liệu</h2>
+                <p>
+                  Khoa học dữ liệu là khoa học về việc quản trị và phân tích dữ
+                  liệu, trích xuất các giá trị từ dữ liệu để quyết định dẫn dắt
+                  hành động.
+                </p>
+              </div>
+            </div>
+            <div class="card">
+              <img src="./images/software.png" alt="se-logo" />
+              <div class="card-info">
+                <h2>Kĩ thuật phần mềm</h2>
+                <p>
+                  Kỹ thuật phần mềm là ngành chuyên nghiên cứu về quy trình,
+                  cách thức hoạt động, kiểm thử của các chương trình máy tính
+                  nhằm đáp ứng các nhu cầu của người dùng.
+                </p>
+              </div>
+            </div>
+            <div class="card">
+              <img src="./images/network.png" alt="it-logo" />
+              <div class="card-info">
+                <h2>Công nghệ thông tin</h2>
+                <p>
+                  Công nghệ thông tin là ngành sử dụng máy tính và phần mềm máy
+                  tính để chuyển đổi, lưu trữ, bảo vệ, xử lý, truyền và thu thập
+                  thông tin.
+                </p>
+              </div>
+            </div>
+            <div class="card">
+              <img src="./images/information.png" alt="is-logo" />
+              <div class="card-info">
+                <h2>Hệ thống thông tin</h2>
+                <p>
+                  Hệ thống thông tin quản lý là ngành học về quy trình thu thập,
+                  phân tích, đánh giá và phân phối những thông tin chính xác cho
+                  những người quyết định trong tổ chức - doanh nghiệp.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <div class="container">
+        <div class="widget">
+          <div class="chat_header">
+            <!--Add the name of the bot here -->
+            <span style="color: white; margin-left: 5px">ChatBot </span>
+            <span
+              style="
+                color: white;
+                margin-right: 5px;
+                float: right;
+                margin-top: 5px;
+              "
+              id="close"
+            >
+              <i class="material-icons" id="close">X</i>
+            </span>
+          </div>
+          <!--Chatbot contents goes here -->
+          <div class="chats" id="chats">
+            <div class="clearfix"></div>
+          </div>
+          <!--user typing indicator -->
+          <div class="keypad">
+            <input
+              type="text"
+              id="keypad"
+              class="usrInput browser-default"
+              placeholder="Type a message..."
+              autocomplete="off"
+            />
+          </div>
+        </div>
+        <!--bot widget -->
+        <div class="chatbot" id="profile_div">
+          <img src="./images/chatbot.png" alt="chatbot-logo" />
+        </div>
+      </div>
+    </main>
+    <footer class="footer">
+      <div class="giangvien">
+        <h2>Giảng viên</h2>
+        <ul>
+          <li>Đặng Thị Phúc</li>
+        </ul>
+      </div>
+      <div class="team">
+        <h2>Team</h2>
+        <ul>
+          <li>Team Data</li>
+          <li>Team công nghệ</li>
+        </ul>
+      </div>
+      <div class="thanhvien">
+        <h2>Thành viên</h2>
+        <ul>
+          <li>Nguyễn Đức Huy</li>
+          <li>Đặng Văn Nghiêm</li>
+        </ul>
+      </div>
+      <div class="contact">
+        <h2 class="contact-title">Liên hệ</h2>
+        <div class="contact-list">
+          <div class="contact-item">
+            <a href="https://www.facebook.com/AiLabIUH"
+              ><img src="./images/facebook.png" alt="fb-logo"
+            /></a>
+          </div>
+          <div class="contact-item">
+            <a href="https://github.com/AILabh93"
+              ><img src="./images/github.png" alt="github-logo"
+            /></a>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script
+      type="text/javascript"
+      src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"
+    ></script>
+    <script
+      type="text/javascript"
+      src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"
+    ></script>
+    <script type="text/javascript" src="./js/script.js"></script>
+  </body>
+</html>
